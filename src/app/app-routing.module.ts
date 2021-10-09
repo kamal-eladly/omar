@@ -1,8 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddEmployeesComponent } from './add-employees/add-employees.component';
+import { HomeComponent } from './home/home.component';
+import { ListEmployeesComponent } from './list-employees/list-employees.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
-const routes: Routes = [];
+const routes: Routes = [
+  {path:"home" , component:HomeComponent },
+  {path:"" , component:HomeComponent },
+  {path:"AddEmp" , component:AddEmployeesComponent },
+  {path:"ListEmp" , component:ListEmployeesComponent },
+  {path:"**" , component:NotFoundComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
